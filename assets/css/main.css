@@ -13,7 +13,7 @@
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Playfair Display",  sans-serif;
+  --heading-font: "Luckiest Guy", cursive;
   --nav-font: "Poppins",  sans-serif;
 }
 
@@ -83,8 +83,15 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  /*color: var(--heading-color);*/
   font-family: var(--heading-font);
+  color: white;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,  
+    -2px  2px 0 #000,  
+     2px  2px 0 #000,  
+     4px  4px 0 orange; /* Sombra naranja externa */
 }
 
 /* PHP Email Form Messages
@@ -222,7 +229,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(12, 11, 9, 0.61);
+  --background-color: rgba(12, 11, 9, 0.827);
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
@@ -972,7 +979,7 @@ section,
 .hero h2 {
   margin: 0;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 0;
 }
 
 .hero h2 span {
