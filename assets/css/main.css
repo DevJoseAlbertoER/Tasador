@@ -988,6 +988,7 @@ section,
 
 .hero h2 span {
   color: var(--accent-color);
+  padding-left: 12%;
 }
 
 .hero p {
