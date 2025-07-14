@@ -1016,7 +1016,7 @@ section,
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 8px 28px;
+  padding: 8px 30px;
   border-radius: 50px;
   transition: 0.3s;
   flex-shrink: 0;
@@ -1069,6 +1069,7 @@ section,
   
     background-color: rgb(241, 5, 5);
     border-color: rgb(206, 185, 5);
+    padding: 8px 25px;
   }
 
   .hero p {
