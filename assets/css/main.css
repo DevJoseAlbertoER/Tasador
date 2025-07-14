@@ -969,7 +969,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  background: color-mix(in srgb, var(--background-color), transparent 80%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -999,6 +999,12 @@ section,
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2%;
   border-radius: 8px;
+  box-shadow: 
+  -2px -2px 0 #000,  
+   2px -2px 0 #000,  
+  -2px  2px 0 #000,  
+   2px  2px 0 #000,  
+   5px  5px 0 rgb(206, 185, 5); /* Sombra externa */
 }
 
 .hero .cta-btn {
@@ -1033,19 +1039,25 @@ section,
   }
   .hero p {
     color: color-mix(in srgb, var(--default-color), transparent 0%);
-    margin: 10% 0 50px 0;
+    margin: 10% 0 80px 0;
     font-size: 20px;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2%;
     border-radius: 8px;
     text-align: center;
+    box-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,  
+    -2px  2px 0 #000,  
+     2px  2px 0 #000,  
+     5px  5px 0 rgb(206, 185, 5); /* Sombra externa */
   }
 }
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 38px;
+    font-size: 40px;
   }
   .hero h2 span {
     padding-left: 12%;
@@ -1053,13 +1065,19 @@ section,
 
   .hero p {
     color: color-mix(in srgb, var(--default-color), transparent 0%);
-    margin: 5% 0 5% 0;
-    font-size: 20px;
-    font-weight: bold;
+    margin: 14% 0 18% 0;
+    font-size: 18px;
+    font-weight: 400;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2%;
-    border-radius: 8px;
+    border-radius: 6px;
     text-align: center;
+    box-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,  
+    -2px  2px 0 #000,  
+     2px  2px 0 #000,  
+     5px  5px 0 rgb(206, 185, 5); /* Sombra externa */
   }
 }
 
