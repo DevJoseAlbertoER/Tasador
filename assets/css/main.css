@@ -1053,7 +1053,7 @@ section,
 
   .hero p {
     color: color-mix(in srgb, var(--default-color), transparent 0%);
-    margin: 5% 0 5%x 0;
+    margin: 5% 0 5% 0;
     font-size: 20px;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.7);
