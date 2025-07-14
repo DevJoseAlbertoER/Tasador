@@ -1000,8 +1000,8 @@ section,
 .hero .cta-btn {
   color: var(--default-color);
   border: 4px solid var(--accent-color);
-  background-color: rgba(236, 65, 9, 0.4);
-  font-weight: 400;
+  background-color: rgba(10, 10, 10, 0.4);
+  font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
