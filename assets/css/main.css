@@ -993,8 +993,12 @@ section,
 
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 0%);
-  margin: 50px 0 20px 0;
+  margin: 50px 0 50px 0;
   font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2%;
+  border-radius: 8px;
 }
 
 .hero .cta-btn {
@@ -1027,6 +1031,16 @@ section,
   .hero h2 span {
     padding-left: 12%;
   }
+  .hero p {
+    color: color-mix(in srgb, var(--default-color), transparent 0%);
+    margin: 10% 0 50px 0;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2%;
+    border-radius: 8px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1038,7 +1052,14 @@ section,
   }
 
   .hero p {
+    color: color-mix(in srgb, var(--default-color), transparent 0%);
+    margin: 5% 0 5%x 0;
     font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2%;
+    border-radius: 8px;
+    text-align: center;
   }
 }
 
