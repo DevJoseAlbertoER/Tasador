@@ -1001,9 +1001,9 @@ section,
   border-radius: 8px;
   box-shadow: 
   -2px -2px 0 #000,  
-   2px -2px 0 #000,  
+  2px -2px 0 #000,  
   -2px  2px 0 #000,  
-   2px  2px 0 #000,  
+  2px  2px 0 #000,  
    5px  5px 0 rgb(206, 185, 5); /* Sombra externa */
 }
 
@@ -1051,9 +1051,9 @@ section,
     text-align: center;
     box-shadow: 
     -2px -2px 0 #000,  
-     2px -2px 0 #000,  
+    2px -2px 0 #000,  
     -2px  2px 0 #000,  
-     2px  2px 0 #000,  
+    2px  2px 0 #000,  
      5px  5px 0 rgb(206, 185, 5); /* Sombra externa */
   }
 }
@@ -1083,9 +1083,9 @@ section,
     text-align: center;
     box-shadow: 
     -2px -2px 0 #000,  
-     2px -2px 0 #000,  
+    2px -2px 0 #000,  
     -2px  2px 0 #000,  
-     2px  2px 0 #000,  
+    2px  2px 0 #000,  
      5px  5px 0 rgb(206, 185, 5); /* Sombra externa */
   }
 }
@@ -1298,6 +1298,19 @@ section,
   font-family: var(--nav-font);
   color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
+
+/*CODIGO AGREGADO PARA LOS EXTRAS Y VARIANTES*/
+.menu-variants, .menu-extras {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.menu-variants .menu-content,
+.menu-extras .menu-content {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
 
 /*--------------------------------------------------------------
 # Specials Section
