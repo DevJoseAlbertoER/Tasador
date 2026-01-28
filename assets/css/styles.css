@@ -504,7 +504,7 @@ section {
 /* MARKET SECTION */
 .card-item {
     background: #1a1814;
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: 0.3s;
