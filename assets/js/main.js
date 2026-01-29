@@ -247,4 +247,41 @@
 
     updateCartUI();
 
+    /**
+     * Safari Detection & Fallback for GloriaFood
+     * Detects Safari browser and replaces widget buttons with direct links
+     * to avoid 3rd party cookie blocking issues.
+     */
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari) {
+        console.log("Safari detected - Switching to direct links for menu/reservations");
+
+        // Wait a bit to ensure DOM is ready and before GloriaFood script takes over fully
+        setTimeout(() => {
+            const glfButtons = document.querySelectorAll('[data-glf-cuid]');
+            const restaurantUid = "14ac628c-91fe-410d-8c72-286183b0006c"; // Your RUID
+            const menuUrl = `https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=${restaurantUid}`;
+            const reservationUrl = `https://www.foodbooking.com/ordering/restaurant/menu?restaurant_uid=${restaurantUid}&glf_reservation=true`;
+
+            glfButtons.forEach(btn => {
+                // Determine if it's a reservation button or menu button
+                const isReservation = btn.getAttribute('data-glf-reservation') === 'true' || btn.classList.contains('reservation');
+                const targetUrl = isReservation ? reservationUrl : menuUrl;
+
+                // Create a replacement <a> tag
+                const link = document.createElement('a');
+                link.className = btn.className; // Keep all styling classes
+                link.href = targetUrl;
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+                link.innerHTML = btn.innerHTML; // Keep the icon and text
+
+                // Remove data attributes to stop GloriaFood script from attaching (if it hasn't already)
+                // Replacing the element completely is safer
+                btn.parentNode.replaceChild(link, btn);
+            });
+        }, 100);
+    }
+
 })();
