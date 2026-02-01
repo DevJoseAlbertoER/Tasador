@@ -393,15 +393,16 @@ ul {
     }
 
     #hero .btns {
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
         width: 100%;
     }
 
     #hero .btns a,
     #hero .btns span {
-        width: 100%;
-        max-width: 350px;
+        width: auto;
+        padding: 12px 25px;
+        /* Ligeramente más pequeños para asegurar que quepan 2 */
+        font-size: 12px;
         justify-content: center;
     }
 }
