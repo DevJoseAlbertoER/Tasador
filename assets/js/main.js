@@ -230,7 +230,7 @@
                     <div class="option-icon"><i class="bi bi-box-seam"></i></div>
                     <div class="option-info">
                         <h4>${title}</h4>
-                        <p>${isVariable ? 'Aprox. 1 Kg' : 'Peso aprox'}</p>
+                        <p>${isVariable ? (name === 'Costilla de Cerdo' ? 'Piezas 0.8 a 1.4 kg Aprox.' : 'Aprox. 1 Kg') : 'Peso Aproximado.'}</p>
                     </div>
                     <div class="option-price">$${isVariable ? price + '/kg' : finalPrice.toFixed(0)}</div>
                 `;
