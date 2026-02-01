@@ -303,7 +303,7 @@ ul {
 #hero {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Gallery_1.jpeg") top center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Gallery_1.jpeg") center center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -462,101 +462,154 @@ section {
         3px 3px 0 orange;
 }
 
-/* About Section */
-.about .content h3 {
-    color: var(--color-accent);
-    margin-bottom: 20px;
-    font-size: 2rem;
+/* --- Premium Redesign Styles --- */
+
+/* Glassmorphism Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 35px;
+    height: 100%;
+    transition: 0.4s;
 }
 
-.about .content p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.9);
+.glass-card:hover {
+    border-color: rgba(205, 164, 94, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
 }
 
-.about .content ul li {
-    margin-bottom: 15px;
-    font-size: 1.05rem;
+/* Premium Image Treatment */
+.img-premium {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(205, 164, 94, 0.2);
+    transition: 0.4s;
+    background: rgba(0, 0, 0, 0.2);
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    line-height: 1.6;
+    align-items: center;
+    justify-content: center;
 }
 
-.about .content ul i {
-    color: var(--color-primary);
-    font-size: 1.2rem;
-}
-
-/* Events Section - Same styling as About */
-.events .content h3 {
-    color: var(--color-accent);
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-.events img {
-    max-width: 100%;
+.img-premium img {
+    border-radius: 20px;
+    transition: 0.5s;
+    width: 100%;
     height: auto;
-    border-radius: 10px;
+    object-fit: cover;
+    display: block;
 }
 
-.events .content p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.9);
+.img-premium:hover img {
+    transform: scale(1.02);
 }
 
-.events .content ul li {
-    margin-bottom: 15px;
-    font-size: 1.05rem;
+/* Premium Lists */
+.premium-list {
+    margin-top: 25px;
+}
+
+.premium-list li {
+    background: rgba(205, 164, 94, 0.05);
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin-bottom: 12px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.premium-list li:hover {
+    background: rgba(205, 164, 94, 0.1);
+    border-color: rgba(205, 164, 94, 0.3);
+}
+
+.premium-list i {
+    color: var(--color-accent);
+    background: rgba(205, 164, 94, 0.2);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+/* Redesign Section Headers inside content */
+.section-content-title {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-content-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--color-accent);
+}
+
+/* About Section Specifics */
+.about .content p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+}
+
+/* Events Button Premium */
+.btn-premium-gold {
+    display: inline-flex;
+    align-items: center;
     gap: 10px;
-    line-height: 1.6;
+    background: var(--color-accent);
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
 }
 
-.events .content ul i {
-    color: var(--color-primary);
-    font-size: 1.2rem;
+.btn-premium-gold:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(205, 164, 94, 0.3);
 }
 
-/* About Section - Mobile Optimization */
 @media (max-width: 768px) {
-    .about img {
-        max-height: 300px;
-        object-fit: cover;
-        width: 100%;
-        border-radius: 10px;
+    .glass-card {
+        padding: 25px;
     }
 
-    .about .content h3 {
-        font-size: 1.6rem;
+    .section-content-title {
+        font-size: 1.8rem;
         text-align: center;
     }
 
-    .about .content p {
-        font-size: 0.95rem;
+    .section-content-title::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .about .content ul li {
-        font-size: 0.95rem;
-    }
-
-    /* Events Section - Mobile Optimization */
-    .events img {
-        max-height: 300px;
-        object-fit: cover;
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    .events .content h3 {
-        font-size: 1.6rem;
-        text-align: center;
+    .premium-list li {
+        font-size: 0.9rem;
+        padding: 10px 15px;
     }
 }
 
@@ -831,68 +884,108 @@ section {
     border: 2px solid #fff;
 }
 
-/* Contact Section - Social Media */
-.social-links h3 {
-    font-size: 1.2rem;
-    color: var(--color-accent);
-    margin-bottom: 15px;
+/* Contact Section Premium */
+.contact .info-box {
     text-align: center;
+    padding: 30px;
+}
+
+.contact .info-box>i {
+    font-size: 1.6rem;
+    color: var(--color-accent);
+    background: rgba(205, 164, 94, 0.15);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 1px solid rgba(205, 164, 94, 0.3);
+    transition: 0.3s;
+}
+
+.social-icons a i {
+    font-size: 1.2rem;
+    color: inherit;
+    background: none;
+    width: auto;
+    height: auto;
+    border: none;
+    margin: 0;
+}
+
+.contact .info-box:hover i {
+    background: var(--color-accent);
+    color: #000;
+}
+
+.contact .info-box h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact .info-box p {
+    padding: 0;
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.social-links {
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.social-links h3 {
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
 }
 
 .social-icons a {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.social-icons a.facebook {
-    background: #3b5998;
+    width: 45px !important;
+    height: 45px !important;
+    min-width: 45px !important;
+    min-height: 45px !important;
+    max-width: 45px !important;
+    max-height: 45px !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
     color: #fff;
+    padding: 0 !important;
+    margin: 0 5px !important;
+    flex: 0 0 45px !important;
 }
 
-.social-icons a.facebook:hover {
-    background: #2d4373;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(59, 89, 152, 0.4);
+.social-icons a:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(205, 164, 94, 0.2);
 }
 
-.social-icons a.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: #fff;
-}
-
-.social-icons a.instagram:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(188, 24, 136, 0.4);
-}
-
-.social-icons a.whatsapp {
-    background: #25d366;
-    color: #fff;
-}
-
-.social-icons a.whatsapp:hover {
-    background: #1da851;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-}
-
-.map-container {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+.map-container.img-premium {
+    height: 100%;
 }
 
 

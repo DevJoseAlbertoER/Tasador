@@ -68,7 +68,7 @@
     const todoCTA = document.getElementById('todo-cta-container');
 
     const updateMenuVisibility = (filter) => {
-        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const query = searchInput ? searchInput.value.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '') : '';
 
         // Handle Todo CTA Visibility
         if (todoCTA) {
@@ -77,13 +77,13 @@
 
         menuItems.forEach(item => {
             if (filter === '*' && query === '') {
-                item.style.display = 'none'; // Hide everything on "Todo" as per user request
+                item.style.display = 'none';
             } else if (filter === '*' || item.classList.contains(filter.replace('.', ''))) {
-                // If we are searching, "Todo" filter should show matches
+                // If we are searching, filter should show matches
                 if (query !== '') {
-                    const title = item.querySelector('.menu-content a')?.textContent.toLowerCase() || '';
-                    const ingredients = item.querySelector('.menu-ingredients')?.textContent.toLowerCase() || '';
-                    const variants = Array.from(item.querySelectorAll('.menu-variant a')).map(v => v.textContent.toLowerCase()).join(' ');
+                    const title = item.querySelector('.menu-content a')?.textContent.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '') || '';
+                    const ingredients = item.querySelector('.menu-ingredients')?.textContent.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '') || '';
+                    const variants = Array.from(item.querySelectorAll('.menu-variant a')).map(v => v.textContent.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')).join(' ');
                     const matches = title.includes(query) || ingredients.includes(query) || variants.includes(query);
                     item.style.display = matches ? 'block' : 'none';
                 } else {
@@ -121,6 +121,7 @@
 
     // Initialize: Hide items because default filter is "*" (Todo)
     updateMenuVisibility('*');
+    // Show all items when the flters is active
 
     /**
      * WhatsApp Shopping Cart Logic
