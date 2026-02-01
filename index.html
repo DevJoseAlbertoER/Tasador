@@ -54,16 +54,14 @@
                     <h2>El mejor restaurante de asados y más...</h2>
                     <p>Disfruta de nuestros platillos a la carta y lleva carne de calidad a casa.</p>
                     <div class="btns">
-                        <span class="btn-menu animated fadeInUp scrollto"
-                            data-glf-cuid="aec98dfb-c75c-4991-84cf-9988c292cfb2"
-                            data-glf-ruid="14ac628c-91fe-410d-8c72-286183b0006c"><i class="bi bi-book"></i> Ver Menú y
-                            Ordenar</span>
+                        <a href="#menu" class="btn-menu animated fadeInUp scrollto"><i class="bi bi-book"></i> Ver
+                            Menú</a>
                         <a href="#raw-meat" class="btn-products animated fadeInUp scrollto"><i class="bi bi-shop"></i>
                             Market</a>
-                        <span class="btn-book animated fadeInUp scrollto reservation"
+                        <span class="btn-delivery animated fadeInUp scrollto"
                             data-glf-cuid="aec98dfb-c75c-4991-84cf-9988c292cfb2"
-                            data-glf-ruid="14ac628c-91fe-410d-8c72-286183b0006c" data-glf-reservation="true"><i
-                                class="bi bi-calendar-check"></i> Reservar Mesa</span>
+                            data-glf-ruid="14ac628c-91fe-410d-8c72-286183b0006c"><i class="bi bi-truck"></i>
+                            Delivery</span>
                     </div>
                 </div>
             </div>
@@ -1265,11 +1263,22 @@
         </div>
     </div>
 
-    <!-- WhatsApp Shopping Cart -->
-    <button class="cart-btn-floating" id="open-cart">
-        <i class="bi bi-whatsapp"></i>
-        <span class="cart-badge" id="cart-count">0</span>
-    </button>
+    <!-- Floating Action Buttons -->
+    <div class="floating-btns-container">
+        <!-- Delivery Floating Btn -->
+        <button class="floating-btn delivery-btn animated fadeInUp" data-glf-cuid="aec98dfb-c75c-4991-84cf-9988c292cfb2"
+            data-glf-ruid="14ac628c-91fe-410d-8c72-286183b0006c">
+            <i class="bi bi-truck"></i>
+            <span class="btn-tooltip">Delivery</span>
+        </button>
+
+        <!-- Market Floating Btn -->
+        <button class="floating-btn market-btn animated fadeInUp" id="open-cart">
+            <i class="bi bi-cart3"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+            <span class="btn-tooltip">Market</span>
+        </button>
+    </div>
 
     <div class="modal-backdrop" id="cart-modal">
         <div class="modal-content">

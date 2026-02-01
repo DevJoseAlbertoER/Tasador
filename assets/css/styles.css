@@ -358,18 +358,19 @@ ul {
 
 #hero .btns a,
 #hero .btns span {
-    padding: 14px 28px;
+    padding: 15px 30px;
     border-radius: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 13px;
     display: flex;
     align-items: center;
     gap: 10px;
-    border: 4px solid var(--color-accent);
+    border: 3px solid var(--color-accent);
     background: var(--color-primary);
     color: #fff;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 #hero .btns a:hover,
@@ -851,21 +852,65 @@ section {
 }
 
 /* Floating elements */
-.cart-btn-floating {
+.floating-btns-container {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 65px;
-    height: 65px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2500;
+}
+
+.floating-btn {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background: #25d366;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 26px;
     cursor: pointer;
-    z-index: 2500;
+    border: none;
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+    transition: 0.3s;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+}
+
+.delivery-btn {
+    background: var(--color-primary);
+    border: 2px solid var(--color-accent);
+}
+
+.market-btn {
+    background: #25d366;
+    /* WhatsApp Green preserved for brand recognition but with cart icon */
+    border: 2px solid #fff;
+}
+
+.btn-tooltip {
+    position: absolute;
+    right: 75px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.floating-btn:hover .btn-tooltip {
+    opacity: 1;
+    right: 70px;
 }
 
 .cart-badge {
@@ -873,10 +918,10 @@ section {
     top: -5px;
     right: -5px;
     background: var(--color-primary);
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     display: flex;
     align-items: center;
