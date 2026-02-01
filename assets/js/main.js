@@ -230,7 +230,7 @@
                     <div class="option-icon"><i class="bi bi-box-seam"></i></div>
                     <div class="option-info">
                         <h4>${title}</h4>
-                        <p>${isVariable ? 'Aprox. 1 Kg' : 'Peso exacto'}</p>
+                        <p>${isVariable ? 'Aprox. 1 Kg' : 'Peso aprox'}</p>
                     </div>
                     <div class="option-price">$${isVariable ? price + '/kg' : finalPrice.toFixed(0)}</div>
                 `;
@@ -279,7 +279,7 @@
     document.getElementById('send-whatsapp')?.addEventListener('click', () => {
         if (cart.length === 0) return alert('Tu carrito está vacío');
 
-        let message = "🥩 *Nuevo Pedido de Market - T'AS-ADOR*\n\n";
+        let message = "🥩 *Nuevo Pedido*\n\n";
         let total = 0;
         cart.forEach(item => {
             const subtotal = item.price * item.quantity * item.weight;
