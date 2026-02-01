@@ -392,6 +392,15 @@ ul {
     }
 
     #hero .btns {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #hero .btns a,
+    #hero .btns span {
+        width: 100%;
+        max-width: 350px;
         justify-content: center;
     }
 }
@@ -401,9 +410,21 @@ section {
     padding: 90px 0;
 }
 
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+}
+
 .section-title {
     text-align: center;
     margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        margin-bottom: 30px;
+    }
 }
 
 .section-title h2 {
@@ -901,4 +922,303 @@ section {
     to {
         opacity: 1;
     }
+}
+
+/* Shared Extras Section */
+.extras-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(205, 164, 94, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-left: 4px solid #cda45e;
+}
+
+.extras-box h5 {
+    color: #cda45e;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.extras-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px 40px;
+}
+
+.extras-box ul li {
+    font-size: 0.85rem;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.extras-box ul li:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.extras-box ul li:last-child {
+    border-bottom: none;
+}
+
+.extras-box ul li span {
+    color: #cda45e;
+    font-weight: 800;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.gourmet-badge {
+    color: #cda45e;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Salsa Thermometer Styles */
+.salsa-thermometer {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.thermometer-header {
+    font-size: 0.9rem;
+    color: #cda45e;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.thermometer-body {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.thermometer-scale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40px;
+}
+
+.scale-bar {
+    flex-grow: 1;
+    width: 8px;
+    background: linear-gradient(to bottom, #fee08b, #fdae61, #f46d43, #d73027, #a50026);
+    border-radius: 10px;
+    margin: 5px 0;
+    position: relative;
+}
+
+.scale-bar::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: #a50026;
+    border-radius: 50%;
+}
+
+.label-top,
+.label-bottom {
+    font-size: 0.65rem;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.thermometer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.thermometer-list li {
+    font-size: 0.85rem;
+    color: #ccc;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.thermometer-list li:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.spice-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.spice-lvl-1 .spice-dot {
+    background: #fee08b;
+    box-shadow: 0 0 5px #fee08b;
+}
+
+.spice-lvl-2 .spice-dot {
+    background: #fdae61;
+    box-shadow: 0 0 5px #fdae61;
+}
+
+.spice-lvl-3 .spice-dot {
+    background: #f46d43;
+    box-shadow: 0 0 5px #f46d43;
+}
+
+.spice-lvl-4 .spice-dot {
+    background: #d73027;
+    box-shadow: 0 0 5px #d73027;
+}
+
+.spice-lvl-5 .spice-dot {
+    background: #a50026;
+    box-shadow: 0 0 10px #a50026;
+}
+
+/* Search Bar Styles */
+.search-container {
+    margin-bottom: 30px;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(205, 164, 94, 0.3);
+    border-radius: 50px;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.search-box:focus-within {
+    border-color: #cda45e;
+    box-shadow: 0 0 20px rgba(205, 164, 94, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.search-box i {
+    color: #cda45e;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+}
+
+/* Animations for search results */
+.menu-item,
+.card-item {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.menu-extra-highlight {
+    color: #cda45e;
+    font-weight: 700;
+    background: rgba(205, 164, 94, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px dashed rgba(205, 164, 94, 0.3);
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+}
+
+/* Refined "Todo" PDF CTA Styles */
+.todo-cta-box {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(205, 164, 94, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.cta-description {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-text {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.btn-cta-pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #cda45e;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-cta-pdf:hover {
+    background: #d9ba85;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(205, 164, 94, 0.3);
+}
+
+.btn-cta-pdf i {
+    font-size: 1.2rem;
 }

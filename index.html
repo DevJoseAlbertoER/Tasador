@@ -238,355 +238,918 @@
                     <p>Descubre nuestros platillos</p>
                 </div>
 
+                <div class="row section-title pb-0" data-aos="fade-up" data-aos-delay="50">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <div class="search-container col-lg-8">
+                            <div class="search-box">
+                                <i class="bi bi-search"></i>
+                                <input type="text" id="product-search"
+                                    placeholder="Busca tu platillo favorito (ej: Picaña, Arrachera)...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-lg-12 d-flex justify-content-center">
                         <ul id="menu-flters">
                             <li data-filter="*" class="filter-active">Todo</li>
                             <li data-filter=".filter-hamb">Hamburguesas</li>
-                            <li data-filter=".filter-tacos">Tacos y Antojitos</li>
+                            <li data-filter=".filter-tacos">Tacos</li>
                             <li data-filter=".filter-chori">Choripanes</li>
                             <li data-filter=".filter-snacks">Snacks</li>
-                            <li data-filter=".filter-especiales">Especiales</li>
+                            <li data-filter=".filter-compartir">Para Compartir</li>
+                            <li data-filter=".filter-antojitos">Antojitos</li>
                             <li data-filter=".filter-bebidas">Bebidas</li>
+                            <li data-filter=".filter-cocteleria">Coctelería</li>
+                            <li data-filter=".filter-postres">Postres</li>
+                            <li data-filter=".filter-extras">Extras</li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- WELCOME / PDF DOWNLOAD BANNER -->
+
                 <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
 
-                    <!-- HAMBURGUESAS -->
-                    <div class="col-lg-6 menu-item filter-hamb">
-                        <div class="menu-content">
-                            <a href="#">Clásica T'as-ador</a><span>$100</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            2 medallones de res, doble queso americano, lechuga, cebolla y aderezos.
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-hamb">
-                        <div class="menu-content">
-                            <a href="#">Arrachera</a><span>$100</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            200 grs de carne, queso americano, lechuga, cebolla y aderezos.
+                    <!-- Centered PDF Download CTA for "Todo" view -->
+                    <div id="todo-cta-container" class="col-12 text-center" style="display: none; padding: 60px 20px;">
+                        <div class="todo-cta-box">
+                            <p class="cta-description">
+                                Para una experiencia más ligera, hemos organizado nuestra carta por categorías.
+                                Selecciona tu favorita arriba o busca lo que se te antoje.
+                            </p>
+                            <p class="cta-text">¿Prefieres ver el menú completo de una vez?</p>
+                            <a href="assets/pdf/Menu_Tasador.pdf" download class="btn-cta-pdf">
+                                <i class="bi bi-file-earmark-pdf"></i> Descárgalo aquí
+                            </a>
                         </div>
                     </div>
 
+                    <!-- CLÁSICA T'AS-ADOR -->
                     <div class="col-lg-6 menu-item filter-hamb">
                         <div class="menu-content">
-                            <a href="#">Chorizo Argentino</a><span>$100</span>
+                            <a href="#">Clásica T'as-ador</a><span>$100.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            1 pieza de chorizo argentino, costra de queso, chimichurri y aderezos.
+                            2 medallones de res, doble queso tipo americano, lechuga, cebolla, mostaza, catsup y
+                            mayonesa, acompañada de papas a la francesa.
                         </div>
                     </div>
 
+                    <!-- ARRACHERA -->
                     <div class="col-lg-6 menu-item filter-hamb">
                         <div class="menu-content">
-                            <a href="#">Bone-Burguer T'as-ador</a><span>$110</span>
+                            <a href="#">Arrachera</a><span>$100.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            Boneless bañados en salsa, milanesa, lechuga, cebolla y aderezos.
+                            200 gr. de carne, queso tipo americano, lechuga, cebolla, mostaza, catsup y mayonesa,
+                            acompañada de papas a la francesa.
                         </div>
                     </div>
 
+                    <!-- CHORIZO ARGENTINO -->
                     <div class="col-lg-6 menu-item filter-hamb">
                         <div class="menu-content">
-                            <a href="#">Clásica Bacon</a><span>$135</span>
+                            <a href="#">Chorizo Argentino</a><span>$100.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            2 medallones de res, doble queso americano, tocino ahumado de la casa.
+                            1 pz. de Chorizo Argentino, costra de queso, chimichurri, lechuga, cebolla, mostaza, catsup
+                            y mayoneza, acompañada de papas a la francesa.
                         </div>
                     </div>
 
+                    <!-- BONE-BURGUER T'AS-ADOR -->
                     <div class="col-lg-6 menu-item filter-hamb">
                         <div class="menu-content">
-                            <a href="#">Ultra (Gourmet)</a><span>$145</span>
+                            <a href="#">Bone-Burguer T'as-ador</a><span>$110.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            200g Arrachera, 1 pieza de chorizo Argentino, costra de queso, chimichurri.
+                            Boneless bañados en salsa de tu elección, lechuga, mayonesa, mostaza, catsup, queso tipo
+                            americano, acompañada de papas a la francesa.
                         </div>
                     </div>
 
+                    <!-- ULTRA -->
                     <div class="col-lg-6 menu-item filter-hamb">
                         <div class="menu-content">
-                            <a href="#">Ranch T'as-ador (Gourmet)</a><span>$145</span>
+                            <a href="#">Ultra <span class="gourmet-badge">(Gourmet)</span></a><span>$145.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            2 medallones, guacamole, totopos y chile toreado relleno de chistorra.
+                            200 gr. de Arrachera, 1 pz. de Chorizo Argentino, costra de queso, chimichurri, queso tipo
+                            americano, lechuga, cebolla, mostaza, catsup y mayonesa, acompañada de papas a la francesa.
                         </div>
                     </div>
 
-                    <!-- TACOS Y ANTOJITOS -->
+                    <!-- CLÁSICA BACON -->
+                    <div class="col-lg-6 menu-item filter-hamb">
+                        <div class="menu-content">
+                            <a href="#">Clásica Bacon <span
+                                    class="gourmet-badge">(Gourmet)</span></a><span>$135.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            2 medallones de res, doble queso tipo americano, tocino ahumado, lechuga, cebolla, mostaza,
+                            catsup y mayonesa, acompañada de papas a la francesa.
+                        </div>
+                    </div>
+
+                    <!-- CLÁSICA HAWAIANA -->
+                    <div class="col-lg-6 menu-item filter-hamb">
+                        <div class="menu-content">
+                            <a href="#">Clásica Hawaiana <span
+                                    class="gourmet-badge">(Gourmet)</span></a><span>$135.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            2 medallones de res, queso tipo americano, costra de queso con piña asada, lechuga, cebolla,
+                            mostaza, catsup y mayonesa, acompañada de papas a la francesa.
+                        </div>
+                    </div>
+
+                    <!-- CLÁSICA CHAMPIÑONES -->
+                    <div class="col-lg-6 menu-item filter-hamb">
+                        <div class="menu-content">
+                            <a href="#">Clásica Champiñones <span
+                                    class="gourmet-badge">(Gourmet)</span></a><span>$135.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            2 medallones de res, queso tipo americano, costra de queso con champiñones salteados con
+                            cebolla caramelizada, lechuga, cebolla, mostaza, catsup y mayonesa, acompañada de papas a la
+                            francesa.
+                        </div>
+                    </div>
+
+                    <!-- PASTOR -->
+                    <div class="col-lg-6 menu-item filter-hamb">
+                        <div class="menu-content">
+                            <a href="#">Pastor <span class="gourmet-badge">(Gourmet)</span></a><span>$135.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Carne al pastor, costra de queso, piña asada, cebolla, cilantro, lechuga, mostaza, catsup y
+                            mayonesa, acompañada de papas a la francesa.
+                        </div>
+                    </div>
+
+                    <!-- RANCH T'AS-ADOR -->
+                    <div class="col-lg-6 menu-item filter-hamb">
+                        <div class="menu-content">
+                            <a href="#">Ranch T'as-ador <span
+                                    class="gourmet-badge">(Gourmet)</span></a><span>$145.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            2 medallones de res, doble queso tipo americano, guacamole, totopos, lechuga, cebolla,
+                            mostaza, catsup y mayonesa, chile toreado envuelto en tocino, <span
+                                class="menu-extra-highlight">relleno de chistorra c/ queso</span>,
+                            acompañada de papas a la francesa.
+                        </div>
+                    </div>
+
+                    <!-- SHARED EXTRAS FOR BURGERS -->
+                    <div class="col-lg-12 menu-item filter-hamb burger-extras-box hide-on-todo mb-4">
+                        <div class="extras-box">
+                            <h5>Extras para tu hamburguesa</h5>
+                            <ul>
+                                <li>C/ Papas Grill <span>+ $25</span></li>
+                                <li>C/ Papas Gajo <span>+ $10</span></li>
+                                <li>C/ Papas Waffle <span>+ $10</span></li>
+                                <li>Guacamole <span>+ $25</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- SHARED SALSA THERMOMETER -->
+                    <div class="col-lg-12 menu-item filter-hamb salsa-thermometer-box hide-on-todo mb-4">
+                        <div class="salsa-thermometer">
+                            <div class="thermometer-header">Salsas a elegir:</div>
+                            <div class="thermometer-body">
+                                <div class="thermometer-scale">
+                                    <span class="label-top">Menos</span>
+                                    <div class="scale-bar"></div>
+                                    <span class="label-bottom">Más</span>
+                                </div>
+                                <ul class="thermometer-list">
+                                    <li class="spice-lvl-1">
+                                        <div class="spice-dot"></div> Ajo Parmesano
+                                    </li>
+                                    <li class="spice-lvl-2">
+                                        <div class="spice-dot"></div> BBQ
+                                    </li>
+                                    <li class="spice-lvl-3">
+                                        <div class="spice-dot"></div> Buffalo
+                                    </li>
+                                    <li class="spice-lvl-4">
+                                        <div class="spice-dot"></div> Mango Habanero
+                                    </li>
+                                    <li class="spice-lvl-5">
+                                        <div class="spice-dot"></div> Crema de Habanero
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GROUPED TACOS -->
                     <div class="col-lg-6 menu-item filter-tacos">
                         <div class="menu-content">
-                            <a href="#">Tacos Sencillos</a><span>$30</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Arrachera, Chistorra, Chorizo Argentino/Español o Pastor.
+                            <a href="#">Tacos (Arrachera, Chistorra, Chorizo Argentino, Chorizo Tipo Español o
+                                Pastor)</a><span>$30.00</span>
                         </div>
                         <div class="menu-variant">
                             <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> Con Queso</a><span>$35</span>
+                                <a href="#"><span class="menu-variant-indicator">↳</span> Tacos con
+                                    queso</a><span>$35</span>
                             </div>
                         </div>
                         <div class="menu-variant">
                             <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> Con Harina y
-                                    Queso</a><span>$40</span>
+                                <a href="#"><span class="menu-variant-indicator">↳</span> Tacos con tortilla de harina y
+                                    queso</a><span>$40</span>
                             </div>
                         </div>
                     </div>
 
+                    <!-- CAZUELONAS -->
                     <div class="col-lg-6 menu-item filter-tacos">
                         <div class="menu-content">
-                            <a href="#">Gringa al Pastor</a><span>$80</span>
+                            <a href="#">Cazuelonas</a><span>$105.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            Tortilla de harina con queso y carne al pastor.
+                            Orden de 3 piezas con Arrachera y costra de queso.
+                        </div>
+                        <div class="menu-variant">
+                            <div class="menu-content">
+                                <a href="#"><span class="menu-variant-indicator">↳</span> Cazuelonas mixtas (4 carnes)
+                                    con costra de queso</a><span>$125.</span>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- GRINGA AL PASTOR -->
                     <div class="col-lg-6 menu-item filter-tacos">
                         <div class="menu-content">
-                            <a href="#">Queso Fundido</a><span>$125</span>
+                            <a href="#">Gringa al pastor</a><span>$80.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            250g con carne a elegir y tortillas de harina.
+                            Carne al pastor, piña, queso, cebolla y cilantro.
                         </div>
                     </div>
 
+                    <!-- QUESO FUNDIDO -->
                     <div class="col-lg-6 menu-item filter-tacos">
                         <div class="menu-content">
-                            <a href="#">Cazuelonas (3 pzas)</a>
+                            <a href="#">Queso Fundido</a><span>$125.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            Orden de 3 piezas con costra de queso.
+                            250 gr. de queso, carne a tu elección, con tortillas de harina Ajo + $10.
                         </div>
-                        <div class="menu-variant">
-                            <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> Con
-                                    Arrachera</a><span>$105</span>
-                            </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Carne a elegir: C/ Arrachera
                         </div>
-                        <div class="menu-variant">
-                            <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> Mixtas</a><span>$125</span>
-                            </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            C/ Chorizo Argentino
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            C/ Chistorra
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            C/ Chorizo Tipo Español.
                         </div>
                     </div>
 
-                    <div class="col-lg-6 menu-item filter-tacos">
-                        <div class="menu-content">
-                            <a href="#">Quesadillas Fritas</a><span>$65</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Tinga, Queso o Picadillo (3 pzas).
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-tacos">
-                        <div class="menu-content">
-                            <a href="#">Tostadas</a>
-                        </div>
-                        <div class="menu-ingredients">
-                            Tinga, Pata o Picadillo.
-                        </div>
-                        <div class="menu-variant">
-                            <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> 1 pieza</a><span>$45</span>
-                            </div>
-                        </div>
-                        <div class="menu-variant">
-                            <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> Orden de 3
-                                    piezas</a><span>$120</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-chori">
-                        <div class="menu-content">
-                            <a href="#">Choripanes</a>
-                        </div>
-                        <div class="menu-ingredients">
-                            Pan artesanal, chimichurri, mayonesa y queso.
-                        </div>
-                        <div class="menu-variant">
-                            <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> Chorizopán</a><span>$70</span>
-                            </div>
-                        </div>
-                        <div class="menu-variant">
-                            <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> Choripán Especial (con
-                                    Chistorra)</a><span>$80</span>
-                            </div>
-                        </div>
-                        <div class="menu-variant">
-                            <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> Choripán Ultra (Arrachera y
-                                    Boneless)</a><span>$105</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-chori">
-                        <div class="menu-content">
-                            <a href="#">Arrapan</a><span>$70</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Pan artesanal, chimichurri, mayonesa, Arrachera y queso.
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-chori">
-                        <div class="menu-content">
-                            <a href="#">Chicken Bake</a><span>$99</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Pan horneado relleno de pollo, queso y tocino.
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-chori">
-                        <div class="menu-content">
-                            <a href="#">Choripán Especial</a><span>$80</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Con Chorizo Argentino, chistorra y queso.
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 menu-item filter-chori">
-                        <div class="menu-content">
-                            <a href="#">Choripán Ultra Especial</a><span>$105</span>
-                        </div>
-                        <div class="menu-ingredients">
-                            Con Chorizo Argentino, chistorra, arrachera y queso.
-                        </div>
-                    </div>
-
-                    <!-- SNACKS -->
+                    <!-- CHICKEN BAKE -->
                     <div class="col-lg-6 menu-item filter-snacks">
                         <div class="menu-content">
-                            <a href="#">Papas Grill</a><span>$100</span>
+                            <a href="#">Chicken Bake</a><span>$99.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            Francesas con queso americano, arrachera, cebolla y cilantro.
+                            Rollo de pan horneado <span class="menu-extra-highlight">relleno de pollo</span>
+                            condimentado con crema, queso, tocino y especias.
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            C/ papas: Waffle
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Gajo
+                        </div>
+                        <div class="menu-variant">
+                            <div class="menu-content">
+                                <a href="#"><span class="menu-variant-indicator">↳</span> Francesa</a><span>$129.</span>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- PAPAS GRILL -->
                     <div class="col-lg-6 menu-item filter-snacks">
                         <div class="menu-content">
-                            <a href="#">Parrillada (1kg de carne)</a>
+                            <a href="#">Papas Grill</a><span>$100.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            Arrachera, Chistorra, Chorizo Argentino y Español.
+                            Orden de papas a la francesa con queso tipo americano, Arrachera, cebolla y cilantro.
+                        </div>
+                        <div class="menu-variant">
+                            <div class="menu-content">
+                                <a href="#"><span class="menu-variant-indicator">↳</span> Grill mixtas (4
+                                    carnes)</a><span>$155.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ALITAS -->
+                    <div class="col-lg-6 menu-item filter-snacks">
+                        <div class="menu-content">
+                            <a href="#">Alitas</a><span>$90.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Al carbón, acompañadas de papas gajo.
+                        </div>
+                    </div>
+
+                    <!-- COSTILLAS -->
+                    <div class="col-lg-6 menu-item filter-snacks">
+                        <div class="menu-content">
+                            <a href="#">Costillas</a><span>$100.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Al carbón, acompañadas de papas gajo.
+                        </div>
+                    </div>
+
+                    <!-- BONELESS -->
+                    <div class="col-lg-6 menu-item filter-snacks">
+                        <div class="menu-content">
+                            <a href="#">Boneless</a><span>$100.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Acompañados de papas gajo.
+                        </div>
+                    </div>
+
+                    <!-- ORDEN DE PAPAS GAJO -->
+                    <div class="col-lg-6 menu-item filter-snacks">
+                        <div class="menu-content">
+                            <a href="#">Orden de Papas Gajo</a><span>$75.00</span>
+                        </div>
+                    </div>
+
+                    <!-- ORDEN DE PAPAS WAFFLE -->
+                    <div class="col-lg-6 menu-item filter-snacks">
+                        <div class="menu-content">
+                            <a href="#">Orden de Papas Waffle</a><span>$75.00</span>
+                        </div>
+                    </div>
+
+                    <!-- ORDEN DE PAPAS A LA FRANCESA -->
+                    <div class="col-lg-6 menu-item filter-snacks">
+                        <div class="menu-content">
+                            <a href="#">Orden de Papas a la Francesa</a><span>$70.00</span>
+                        </div>
+                    </div>
+
+                    <!-- SHARED SALSA THERMOMETER -->
+                    <div class="col-lg-12 menu-item filter-snacks salsa-thermometer-box hide-on-todo mb-4">
+                        <div class="salsa-thermometer">
+                            <div class="thermometer-header">Salsas a elegir:</div>
+                            <div class="thermometer-body">
+                                <div class="thermometer-scale">
+                                    <span class="label-top">Menos</span>
+                                    <div class="scale-bar"></div>
+                                    <span class="label-bottom">Más</span>
+                                </div>
+                                <ul class="thermometer-list">
+                                    <li class="spice-lvl-1">
+                                        <div class="spice-dot"></div> Ajo Parmesano
+                                    </li>
+                                    <li class="spice-lvl-2">
+                                        <div class="spice-dot"></div> BBQ
+                                    </li>
+                                    <li class="spice-lvl-3">
+                                        <div class="spice-dot"></div> Buffalo
+                                    </li>
+                                    <li class="spice-lvl-4">
+                                        <div class="spice-dot"></div> Mango Habanero
+                                    </li>
+                                    <li class="spice-lvl-5">
+                                        <div class="spice-dot"></div> Crema de Habanero
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PARRILLADA -->
+                    <div class="col-lg-6 menu-item filter-compartir">
+                        <div class="menu-content">
+                            <a href="#">Parrillada</a><span>$455.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            1 kg. de carne a tu elección (Arrachera, Chistorra, Chorizo Argentino, Chorizo Tipo Español
+                            y Pastor). Incluye tortillas, salsas, limones y guarniciones.
                         </div>
                         <div class="menu-variant">
                             <div class="menu-content">
                                 <a href="#"><span class="menu-variant-indicator">↳</span> Media
-                                    (500g)</a><span>$250</span>
+                                    Parrillada</a><span>$250.</span>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- ROLLO CAMPESTRE -->
+                    <div class="col-lg-6 menu-item filter-compartir">
+                        <div class="menu-content">
+                            <a href="#">Rollo Campestre</a><span>$185.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Rollo de queso philadelfia, con mix de frutos secos bañado con salsa de chabacano acompañado
+                            de galletas saladas.
                         </div>
                         <div class="menu-variant">
                             <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> Completa
-                                    (1kg)</a><span>$455</span>
+                                <a href="#"><span class="menu-variant-indicator">↳</span> C/ copa de
+                                    clericot</a><span>$215.</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-6 menu-item filter-snacks">
+                    <!-- BOTANERO -->
+                    <div class="col-lg-6 menu-item filter-compartir">
                         <div class="menu-content">
-                            <a href="#">Botanero Ultra</a><span>$300</span>
+                            <a href="#">Botanero</a><span>$309.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            Variedad de carnes y snacks para compartir.
+                            Incluye: Alitas, costillas, boneless, papas grill, papas gajo y papas waffle.
                         </div>
                     </div>
 
-                    <div class="col-lg-6 menu-item filter-snacks">
+                    <!-- BOTANERO ULTRA -->
+                    <div class="col-lg-6 menu-item filter-compartir">
                         <div class="menu-content">
-                            <a href="#">Alitas / Costillas</a><span>$90</span>
+                            <a href="#">Botanero Ultra</a><span>$509.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            Al carbón, con papas gajo. $100 c/u.
+                            Incluye: Alitas, costillas, boneless, papas grill, papas gajo, 1 hamburguesa Ultra y 2
+                            hamburguesas de Arrachera.
                         </div>
                     </div>
 
-                    <div class="col-lg-6 menu-item filter-snacks">
+                    <!-- SHARED SALSA THERMOMETER -->
+                    <div class="col-lg-12 menu-item filter-compartir salsa-thermometer-box hide-on-todo mb-4">
+                        <div class="salsa-thermometer">
+                            <div class="thermometer-header">Salsas a elegir:</div>
+                            <div class="thermometer-body">
+                                <div class="thermometer-scale">
+                                    <span class="label-top">Menos</span>
+                                    <div class="scale-bar"></div>
+                                    <span class="label-bottom">Más</span>
+                                </div>
+                                <ul class="thermometer-list">
+                                    <li class="spice-lvl-1">
+                                        <div class="spice-dot"></div> Ajo Parmesano
+                                    </li>
+                                    <li class="spice-lvl-2">
+                                        <div class="spice-dot"></div> BBQ
+                                    </li>
+                                    <li class="spice-lvl-3">
+                                        <div class="spice-dot"></div> Buffalo
+                                    </li>
+                                    <li class="spice-lvl-4">
+                                        <div class="spice-dot"></div> Mango Habanero
+                                    </li>
+                                    <li class="spice-lvl-5">
+                                        <div class="spice-dot"></div> Crema de Habanero
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ARRAPAN -->
+                    <div class="col-lg-6 menu-item filter-chori">
                         <div class="menu-content">
-                            <a href="#">Boneless</a><span>$100</span>
+                            <a href="#">Arrapan</a><span>$70.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            Con papas gajo y salsa a elegir.
+                            Pan artesanal con chimichurri, mayonesa y Arrachera.
                         </div>
                     </div>
 
-                    <!-- ESPECIALES -->
-                    <div class="col-lg-6 menu-item filter-especiales">
+                    <!-- CHORIPÁN -->
+                    <div class="col-lg-6 menu-item filter-chori">
                         <div class="menu-content">
-                            <a href="#">Enchiladas con Arrachera</a><span>$125</span>
+                            <a href="#">Choripán</a><span>$70.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            Rojas o verdes, servidas con nuestra mejor carne.
+                            Pan artesanal con chimichurri, mayonesa y Chorizo Argentino.
                         </div>
                     </div>
 
-                    <div class="col-lg-6 menu-item filter-especiales">
+                    <!-- CHORIPÁN ESPECIAL -->
+                    <div class="col-lg-6 menu-item filter-chori">
                         <div class="menu-content">
-                            <a href="#">Chilaquiles Rellenos</a><span>$145</span>
+                            <a href="#">Choripán Especial</a><span>$80.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            De pollo con arrachera.
+                            Pan artesanal con chimichurri, mayonesa, Chorizo Argentino y Arrachera.
                         </div>
                     </div>
 
-                    <!-- BEBIDAS -->
+                    <!-- CHORIPÁN ULLTRA ESPECIAL -->
+                    <div class="col-lg-6 menu-item filter-chori">
+                        <div class="menu-content">
+                            <a href="#">Choripán Ulltra Especial</a><span>$105.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Pan artesanal con chimichurri, mayonesa, Chorizo Argentino, Arrachera y costra de queso,
+                            acompañado de papas gajo.
+                        </div>
+                    </div>
+
+                    <!-- ENCHILADAS ROJAS O VERDES -->
+                    <div class="col-lg-6 menu-item filter-antojitos">
+                        <div class="menu-content">
+                            <a href="#">Enchiladas Rojas o Verdes</a><span>$125.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Con Arrachera, acompañadas de lechuga, queso y crema.
+                        </div>
+                    </div>
+
+                    <!-- ENCHILADAS SUIZAS -->
+                    <div class="col-lg-6 menu-item filter-antojitos">
+                        <div class="menu-content">
+                            <a href="#">Enchiladas suizas</a><span>$135.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Rellenas de pollo, cubiertas de queso manchego, cebolla, acompañadas de frijoles refritos
+                            con totopos. <span class="menu-extra-highlight">C/ Arrachera +$40</span>
+                        </div>
+                    </div>
+
+                    <!-- CHILAQUILES RELLENOS ROJOS O VERDES -->
+                    <div class="col-lg-6 menu-item filter-antojitos">
+                        <div class="menu-content">
+                            <a href="#">Chilaquiles Rellenos Rojos o Verdes</a><span>$145.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Con el relleno de tu elección, con Arrachera, acompañadas de queso, crema, cebolla y
+                            cilantro.
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            <span class="menu-extra-highlight">Rellenos: Queso o Pollo</span>
+                        </div>
+                    </div>
+
+                    <!-- QUESADILLAS FRITAS -->
+                    <div class="col-lg-6 menu-item filter-antojitos">
+                        <div class="menu-content">
+                            <a href="#">Quesadillas Fritas</a><span>$65.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Acompañadas de lechuga, queso y crema.
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            <span class="menu-extra-highlight">Rellenos: Tinga</span>
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Queso
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Picadillo.
+                        </div>
+                    </div>
+
+                    <!-- TOSTADAS -->
+                    <div class="col-lg-6 menu-item filter-antojitos">
+                        <div class="menu-content">
+                            <a href="#">Tostadas</a><span>$45.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Acompañadas de lechuga, queso y crema.
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Tipos: Tinga
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Pata
+                        </div>
+                        <div class="menu-variant">
+                            <div class="menu-content">
+                                <a href="#"><span class="menu-variant-indicator">↳</span> Picadillo. Orden de 3
+                                    piezas</a><span>$120.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- REFRESCOS -->
                     <div class="col-lg-6 menu-item filter-bebidas">
                         <div class="menu-content">
-                            <a href="#">Aguas de Fruta / Té Negro</a>
+                            <a href="#">Refrescos</a><span>$30.00</span>
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Coca
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Manzanita
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Delaware
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Fanta
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Sangría
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Agua mineral.
+                        </div>
+                    </div>
+
+                    <!-- ARIZONA -->
+                    <div class="col-lg-6 menu-item filter-bebidas">
+                        <div class="menu-content">
+                            <a href="#">Arizona</a><span>$30.00</span>
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Mango
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Sandía
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Kiwi-Fresa
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Ponche.
+                        </div>
+                    </div>
+
+                    <!-- AGUA DE HORCHATA -->
+                    <div class="col-lg-6 menu-item filter-bebidas">
+                        <div class="menu-content">
+                            <a href="#">Agua de Horchata</a><span>$25.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            Naturales y frescas del día.
+                            1/2 L
                         </div>
                         <div class="menu-variant">
                             <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> 1/2 Litro</a><span>$25</span>
-                            </div>
-                        </div>
-                        <div class="menu-variant">
-                            <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> 1 Litro</a><span>$45</span>
-                            </div>
-                        </div>
-                        <div class="menu-variant">
-                            <div class="menu-content">
-                                <a href="#"><span class="menu-variant-indicator">↳</span> Jarra</a><span>$110</span>
+                                <a href="#"><span class="menu-variant-indicator">↳</span> 1L</a><span>$45.</span>
                             </div>
                         </div>
                     </div>
 
+                    <!-- TE NEGRO DE LIMÓN (FRÍO) -->
                     <div class="col-lg-6 menu-item filter-bebidas">
                         <div class="menu-content">
-                            <a href="#">Cerveza</a><span>$35</span>
+                            <a href="#">Te Negro de Limón (Frío)</a><span>$25.00</span>
                         </div>
                         <div class="menu-ingredients">
-                            Michelob Ultra, Modelo, Pacífico.
+                            1/2 L
+                        </div>
+                        <div class="menu-variant">
+                            <div class="menu-content">
+                                <a href="#"><span class="menu-variant-indicator">↳</span> 1L</a><span>$45.</span>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- JUGO JUMEX -->
                     <div class="col-lg-6 menu-item filter-bebidas">
                         <div class="menu-content">
-                            <a href="#">Mojitos / Cantaritos</a><span>$70</span>
+                            <a href="#">Jugo Jumex</a><span>$25.00</span>
                         </div>
-                        <div class="menu-ingredients">
-                            Coctelería preparada al momento.
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Mango
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Durazno
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Manzana.
                         </div>
                     </div>
+
+                    <!-- AGUA SIMPLE -->
+                    <div class="col-lg-6 menu-item filter-bebidas">
+                        <div class="menu-content">
+                            <a href="#">Agua Simple</a><span>$20.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            600 ml. Bonafont.
+                        </div>
+                    </div>
+
+                    <!-- CAFÉ -->
+                    <div class="col-lg-6 menu-item filter-bebidas">
+                        <div class="menu-content">
+                            <a href="#">Café</a><span>$25.00</span>
+                        </div>
+                    </div>
+
+                    <!-- CERVEZA -->
+                    <div class="col-lg-6 menu-item filter-bebidas">
+                        <div class="menu-content">
+                            <a href="#">Cerveza</a><span>$35.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            C/ tarro escarchado: Limon y sal + $5. Tamarindo, Chile y Ajojolí + $10.
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Michelob Ultra
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Modelo
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Pacifico
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            NocheBuena.
+                        </div>
+                    </div>
+
+                    <!-- CHELADA -->
+                    <div class="col-lg-6 menu-item filter-bebidas">
+                        <div class="menu-content">
+                            <a href="#">Chelada</a><span>$45.00</span>
+                        </div>
+                    </div>
+
+                    <!-- MICHELADA -->
+                    <div class="col-lg-6 menu-item filter-bebidas">
+                        <div class="menu-content">
+                            <a href="#">Michelada</a><span>$55.00</span>
+                        </div>
+                    </div>
+
+                    <!-- SANGRIA PREPARADA -->
+                    <div class="col-lg-6 menu-item filter-bebidas">
+                        <div class="menu-content">
+                            <a href="#">Sangria Preparada</a><span>$40.00</span>
+                        </div>
+                    </div>
+
+                    <!-- BOTELLA DE VINO TINTO -->
+                    <div class="col-lg-6 menu-item filter-bebidas">
+                        <div class="menu-content">
+                            <a href="#">Botella de Vino Tinto</a><span>$255.00</span>
+                        </div>
+                    </div>
+
+                    <!-- LIMONADA -->
+                    <div class="col-lg-6 menu-item filter-bebidas">
+                        <div class="menu-content">
+                            <a href="#">Limonada</a><span>$35.00</span>
+                        </div>
+                    </div>
+
+                    <!-- AGUA MINERAL PREPARADA -->
+                    <div class="col-lg-6 menu-item filter-bebidas">
+                        <div class="menu-content">
+                            <a href="#">Agua Mineral Preparada</a><span>$35.00</span>
+                        </div>
+                    </div>
+
+                    <!-- MOJITO -->
+                    <div class="col-lg-6 menu-item filter-cocteleria">
+                        <div class="menu-content">
+                            <a href="#">Mojito</a><span>$70.00</span>
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Tradicional
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Fresa
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Frutos Rojos.
+                        </div>
+                    </div>
+
+                    <!-- PIÑA COLADA -->
+                    <div class="col-lg-6 menu-item filter-cocteleria">
+                        <div class="menu-content">
+                            <a href="#">Piña colada</a><span>$60.00</span>
+                        </div>
+                        <div class="menu-variant">
+                            <div class="menu-content">
+                                <a href="#"><span class="menu-variant-indicator">↳</span> C/ Ron</a><span>$70.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- QUEMADITA -->
+                    <div class="col-lg-6 menu-item filter-cocteleria">
+                        <div class="menu-content">
+                            <a href="#">Quemadita</a><span>$70.00</span>
+                        </div>
+                    </div>
+
+                    <!-- SANGRÍA CON RON Y VINO TINTO -->
+                    <div class="col-lg-6 menu-item filter-cocteleria">
+                        <div class="menu-content">
+                            <a href="#">Sangría con Ron y Vino TInto</a><span>$75.00</span>
+                        </div>
+                    </div>
+
+                    <!-- PALOMA -->
+                    <div class="col-lg-6 menu-item filter-cocteleria">
+                        <div class="menu-content">
+                            <a href="#">Paloma</a><span>$70.00</span>
+                        </div>
+                    </div>
+
+                    <!-- CANTARITO -->
+                    <div class="col-lg-6 menu-item filter-cocteleria">
+                        <div class="menu-content">
+                            <a href="#">Cantarito</a><span>$70.00</span>
+                        </div>
+                    </div>
+
+                    <!-- CLERICOT -->
+                    <div class="col-lg-6 menu-item filter-cocteleria">
+                        <div class="menu-content">
+                            <a href="#">Clericot</a><span>$70.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Copa
+                        </div>
+                        <div class="menu-variant">
+                            <div class="menu-content">
+                                <a href="#"><span class="menu-variant-indicator">↳</span> Jarra 1 L</a><span>$190</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CABALLITO DE TEQUILA -->
+                    <div class="col-lg-6 menu-item filter-cocteleria">
+                        <div class="menu-content">
+                            <a href="#">Caballito de Tequila</a><span>$50.00</span>
+                        </div>
+                    </div>
+
+                    <!-- CHURRO BITES RELLENOS -->
+                    <div class="col-lg-6 menu-item filter-postres">
+                        <div class="menu-content">
+                            <a href="#">Churro Bites rellenos</a><span>$75.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            5 Bite Churros Rellenos del sabor de tu elección, espolvoreados con azucar y canela, 1 bola
+                            de helado de vainilla de la casa y chocolate.
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            <span class="menu-extra-highlight">Rellenos: Cajeta</span>
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Manzana con Philadelphia
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Nutella.
+                        </div>
+                    </div>
+
+                    <!-- ADEREZOS EXTRA -->
+                    <div class="col-lg-6 menu-item filter-extras">
+                        <div class="menu-content">
+                            <a href="#">Aderezos extra</a><span>$5.00</span>
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Ajo Parmesano
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            BBQ
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Buffalo
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Mango Habanero
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Crema de Habanero
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Salsa Verde
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Salsa Roja
+                        </div>
+                        <div class="menu-ingredients" style="font-size: 0.85rem; color: #aaa;">
+                            Chimichurri.
+                        </div>
+                    </div>
+
+                    <!-- PLATO DE GUARNICIONES EXTRA -->
+                    <div class="col-lg-6 menu-item filter-extras">
+                        <div class="menu-content">
+                            <a href="#">Plato de guarniciones extra</a><span>$35.00</span>
+                        </div>
+                        <div class="menu-ingredients">
+                            Plato Chico.
+                        </div>
+                        <div class="menu-variant">
+                            <div class="menu-content">
+                                <a href="#"><span class="menu-variant-indicator">↳</span> Plato
+                                    Grande</a><span>$55</span>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
@@ -713,7 +1276,6 @@
         </div>
     </div>
 
-    <!-- GloriaFood Script -->
     <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 
     <!-- JS -->

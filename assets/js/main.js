@@ -1,7 +1,7 @@
 /**
-* Template Name: Tasador Custom
-* Author: Biteo
-*/
+ * Template Name: Tasador Custom
+ * Author: Biteo
+ */
 
 (function () {
     "use strict";
@@ -61,21 +61,66 @@
     /**
      * Menu isotope and filter
      */
-    document.querySelectorAll('#menu-flters li').forEach(filterBtn => {
+    const menuFilters = document.querySelectorAll('#menu-flters li');
+    const menuItems = document.querySelectorAll('.menu-item');
+    const marketItems = document.querySelectorAll('.card-item');
+    const searchInput = document.getElementById('product-search');
+    const todoCTA = document.getElementById('todo-cta-container');
+
+    const updateMenuVisibility = (filter) => {
+        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+        // Handle Todo CTA Visibility
+        if (todoCTA) {
+            todoCTA.style.display = (filter === '*' && query === '') ? 'block' : 'none';
+        }
+
+        menuItems.forEach(item => {
+            if (filter === '*' && query === '') {
+                item.style.display = 'none'; // Hide everything on "Todo" as per user request
+            } else if (filter === '*' || item.classList.contains(filter.replace('.', ''))) {
+                // If we are searching, "Todo" filter should show matches
+                if (query !== '') {
+                    const title = item.querySelector('.menu-content a')?.textContent.toLowerCase() || '';
+                    const ingredients = item.querySelector('.menu-ingredients')?.textContent.toLowerCase() || '';
+                    const variants = Array.from(item.querySelectorAll('.menu-variant a')).map(v => v.textContent.toLowerCase()).join(' ');
+                    const matches = title.includes(query) || ingredients.includes(query) || variants.includes(query);
+                    item.style.display = matches ? 'block' : 'none';
+                } else {
+                    item.style.display = 'block';
+                }
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    };
+
+    menuFilters.forEach(filterBtn => {
         filterBtn.addEventListener('click', function () {
             let filter = this.getAttribute('data-filter');
-            document.querySelectorAll('#menu-flters li').forEach(el => el.classList.remove('filter-active'));
+            menuFilters.forEach(el => el.classList.remove('filter-active'));
             this.classList.add('filter-active');
 
-            document.querySelectorAll('.menu-item').forEach(item => {
-                if (filter === '*' || item.classList.contains(filter.replace('.', ''))) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+            // Clear search when changing category
+            if (searchInput) searchInput.value = '';
+
+            updateMenuVisibility(filter);
         });
     });
+
+    /**
+     * Search Functionality
+     */
+    if (searchInput) {
+        searchInput.addEventListener('input', function () {
+            const activeBtn = document.querySelector('#menu-flters .filter-active');
+            const activeFilter = activeBtn ? activeBtn.getAttribute('data-filter') : '*';
+            updateMenuVisibility(activeFilter);
+        });
+    }
+
+    // Initialize: Hide items because default filter is "*" (Todo)
+    updateMenuVisibility('*');
 
     /**
      * WhatsApp Shopping Cart Logic

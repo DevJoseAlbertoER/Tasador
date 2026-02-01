@@ -1,0 +1,15 @@
+# Business Sensitive Files
+*.xlsx
+MENÚ TASADOR (2025).pdf
+assets/pdf/
+
+# Images (as requested)
+assets/img/
+
+# Test Files
+test_layout.html
+promotional.html
+
+# IDE Files
+.idea/
+.DS_Store
