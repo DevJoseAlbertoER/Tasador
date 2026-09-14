@@ -1313,33 +1313,55 @@
 
     <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 
-    <!-- Local Business Data (SEO) -->
-    <script type="application/ld+json">
+   <!-- Local Business Data (SEO Optimizado) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Tasador (T'AS-ADOR)",
+  "image": "https://tasador.com.mx/assets/img/about_us.JPG",
+  "@id": "https://tasador.com.mx",
+  "url": "https://tasador.com.mx",
+  "telephone": "+527712064345",
+  "priceRange": "$$",
+  "servesCuisine": [
+    "Asados",
+    "Carnes al carbón",
+    "Parrilla",
+    "Hamburguesas",
+    "Mexicana"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Fernando Soto 8, Local D",
+    "addressLocality": "Tasquillo",
+    "addressRegion": "Hgo.",
+    "postalCode": "42380",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 20.5519421,
+    "longitude": -99.312954
+  },
+  "openingHoursSpecification": [
     {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "TASADOR (T'AS-ADOR)",
-      "image": "https://tasador.com.mx/assets/img/about_us.JPG",
-      "@id": "https://tasador.com.mx",
-      "url": "https://tasador.com.mx",
-      "telephone": "+527712064345",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Calle Los Fresnos #8, Atras de la presidencia municipal",
-        "addressLocality": "Tasquillo",
-        "addressRegion": "Hidalgo",
-        "postalCode": "42380",
-        "addressCountry": "MX"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 20.5519421,
-        "longitude": -99.312954
-      },
-      "servesCuisine": "Asados, Grill, Mexican",
-      "hasMenu": "https://tasador.com.mx/assets/pdf/Menu_Tasador.pdf"
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Thursday", "Friday", "Sunday", "Monday"],
+      "opens": "16:00",
+      "closes": "23:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "16:30",
+      "closes": "23:30"
     }
-    </script>
+  ],
+  "hasMenu": "https://tasador.com.mx/#menu",
+  "acceptsReservations": "False"
+}
+</script>
 
     <!-- JS -->
     <script src="assets/js/main.js"></script>
